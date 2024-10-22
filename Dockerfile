@@ -8,7 +8,8 @@ RUN apk add --no-cache docker-cli python3 py3-pip py3-matplotlib
 WORKDIR /usr/src/app
 
 # Pythonスクリプト（app.py）をコンテナにコピー
-COPY app.py .
+COPY app.py . 
+COPY ./src ./src
 
 # コンテナ実行時にPythonスクリプトを実行
 CMD ["python3", "app.py"]
